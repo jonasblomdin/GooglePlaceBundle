@@ -1,0 +1,12 @@
+parameters:
+    taka512_google_place.search_api.class: Taka512\GooglePlaceBundle\Services\SearchApi
+    taka512_google_place.search_criteria.class: Taka512\GooglePlaceBundle\Model\SearchCriteria
+services:
+    taka512_google_place.search_api:
+        class:      %taka512_google_place.search_api.class%
+        arguments:  
+            -    %taka512_google_place.api_key%
+            -    @validator
+            -    @logger
+            -    %taka512_google_place.search_criteria.class%
+

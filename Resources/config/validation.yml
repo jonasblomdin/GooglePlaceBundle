@@ -1,0 +1,13 @@
+Taka512\GooglePlaceBundle\Model\SearchCriteria:
+    properties:
+        latitude:
+            - NotBlank: ~
+        longitude:
+            - NotBlank: ~
+        apiKey:
+            - NotBlank: ~
+        radius:
+            - NotBlank: ~
+        sensor:
+            - NotBlank: ~
+
