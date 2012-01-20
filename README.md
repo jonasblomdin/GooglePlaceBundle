@@ -68,7 +68,7 @@ identifier.
 
 To retrieve the service from the container:
 
-    $geo = $this->get('taka512_google_place.search_api');
+    $searchApi = $this->get('taka512_google_place.search_api');
 
 ### Basic usage
 
@@ -79,12 +79,13 @@ To find places
     $c->setLatitude(35.675888);
     $c->setLongitude(139.7448576);
     $c->setTypes(array('convenience_store'));
-    $places = $placeApi->searchPlaces($c);
+    $places = $searchApi->searchPlaces($c);
 
     if($places->isSuccess())
     {
         foreach($places->getPlaces() as $place)
         {
+            $name = $place->getName();
             $lat = $place->getLatitude();
             $lng = $place->getLongitude();
         }
