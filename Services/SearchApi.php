@@ -127,7 +127,6 @@ class SearchApi
         return $places;
     }
     // }}}
-
     // {{{ setSearchParametersForCriteria
     /**
      */

@@ -100,6 +100,7 @@ class Places
      */
     public function setPlaces(array $results)
     {
+
         foreach($results as $result)
         {
             $place = new Place();
