@@ -107,7 +107,6 @@ class SearchApi
     public function searchPlaces(GetCriteriaInterface $c)
     {
         $this->setSearchParametersForCriteria($c);
-        $this->validateSearchParameters($c);
 
         $response   = $this->request($c);
 
@@ -133,22 +132,6 @@ class SearchApi
     protected function setSearchParametersForCriteria($c)
     {
         $c->setApiKey($this->apiKey);
-    }
-    // }}}
-    // {{{ validateSearchParameters
-    /**
-     */
-    protected function validateSearchParameters($c)
-    {
-        $errors = $this->validator->validate($c);
-        if (count($errors) > 0)
-        {
-            foreach($errors as $error)
-            {
-                $this->logger->err(sprintf('%s:%s:%s',$error->getPropertyPath(), $error->getInvalidValue(),$error->getMessage()));
-            }
-            throw new \Exception(sprintf('[%s] validate error', __METHOD__));
-        }
     }
     // }}}
     // {{{ request
