@@ -45,7 +45,7 @@ service
 
 3. Add bundle to application kernel:
 
-        // app/ApplicationKernel.php
+        // app/AppKernel.php
         public function registerBundles()
         {
             return array(
