@@ -141,13 +141,32 @@ class SearchCriteria implements GetCriteriaInterface
     {
         return $this->radius;
     }
+    /**
+     * Set types
+     *
+     * @param string $types
+     */
+    public function setTypes($types)
+    {
+        $this->types = $types;
+    }
 
+    /**
+     * Get types
+     *
+     * @return string
+     */
+    public function getTypes()
+    {
+
+        return $this->types;
+    }
     /**
      * Set types
      *
      * @param array $types
      */
-    public function setTypes($types)
+    public function setTypesByArray($types)
     {
         $this->types =  implode(self::TYPES_DELIMITER, $types);
     }
@@ -157,7 +176,7 @@ class SearchCriteria implements GetCriteriaInterface
      *
      * @return array
      */
-    public function getTypes()
+    public function getTypesArray()
     {
 
         return explode(self::TYPES_DELIMITER, $this->types);
