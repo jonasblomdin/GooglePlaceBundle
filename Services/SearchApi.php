@@ -5,7 +5,7 @@ namespace Taka512\GooglePlaceBundle\Services;
 use Taka512\GooglePlaceBundle\Entity\Places;
 use Taka512\GooglePlaceBundle\Model\GetCriteriaInterface;
 
-use Symfony\Component\Validator\Validator;
+use Symfony\Component\Validator\Validator\LegacyValidator as Validator;
 use Symfony\Bridge\Monolog\Logger;
 use Buzz\Browser;
 
