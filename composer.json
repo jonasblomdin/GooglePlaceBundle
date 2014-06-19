@@ -1,0 +1,28 @@
+{
+    "name": "taka512/google-place-bundle",
+    "description": "A Symfony 2 bundle for the Google Place API service",
+    "keywords": ["google places", "google"],
+    "homepage": "https://github.com/taka512/GooglePlaceBundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "repositories":[
+        {
+            "type":"git",
+            "url":"git@github.com:taka512/GooglePlaceBundle.git"
+        }
+    ],
+    "authors": [
+        {
+            "name": "taka512",
+            "homepage": "https://github.com/taka512"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "kriswallsmith/buzz": "*"
+    },
+    "autoload": {
+        "psr-0": { "Taka512\\GooglePlaceBundle": "" }
+    },
+    "target-dir": "Taka512/GooglePlaceBundle"
+}
